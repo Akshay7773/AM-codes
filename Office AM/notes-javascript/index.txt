@@ -1,0 +1,160 @@
+//------------------------------------object iterations----------------------------------------------
+//---using for of----------
+let obj={ name:"akash",lastname:"dsfdf",email:"qwedsa"}
+let i=0;
+   for(const [key,value] of Object.entries(obj))
+    {
+        if(i<2){
+            console.log(key+":"+value)
+        }
+        i++
+    }
+//-----using for in----------
+let obj={ name:"akash",lastname:"dsfdf",email:"qwedsa"}
+let i=0;
+for(const key in obj)
+    {
+        if(i<2){
+            console.log(key+":"+obj[key])
+        }
+        i++
+    }
+ output => [
+  { name: 'a', email: 'abc', lastname: '' },
+  { name: 'b', email: 'xyz', lastname: '' }
+]
+ //-------------------------------------------------add one more element in each object of an array-------------------------------
+ //---using forEach----
+ let arr=[{name:"a",email:"abc"},{name:"b",email:"xyz"}]
+arr.forEach((a)=>{
+  a.lastname=""
+})
+console.log(arr)
+output => [
+  { name: 'a', email: 'abc', lastname: '' },
+  { name: 'b', email: 'xyz', lastname: '' }
+]
+//------using map---
+let arr=[{name:"a",email:"abc"},{name:"b",email:"xyz"}]
+let arr1=arr.map((a)=>
+{ return  {...a,lastname:""} }
+)
+console.log(arr1)
+ output => [
+  { name: 'a', email: 'abc', lastname: '' },
+  { name: 'b', email: 'xyz', lastname: '' }
+]
+//--------------------------------------------remove an element of each object from an array----------------------------------
+let arr1=
+[
+  { name: 'a', email: 'abc', lastname: '' },
+  { name: 'b', email: 'xyz', lastname: '' }
+]
+let abc= arr1.map(({lastname,...rest})=>{
+  return rest
+})
+console.log(abc)
+output=>[ { name: 'a', email: 'abc' }, { name: 'b', email: 'xyz' } ]
+//-----------------------------------------replace string with link-----------------------------------------------
+//-------using for loop and array--------
+let text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+const arr=text.split(" ")
+for(let i=0;i<arr.length;i++){
+if(arr[i]=="Lorem"){
+arr[i]="<a href='#'>link</a>"
+}
+}
+document.getElementById("demo").innerHTML = arr.join(" ");
+output=>link Ipsum is simply dummy text of the printing and typesetting industry. link Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing link Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of link Ipsum
+//------using replaceAll---------
+let text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+const newText=text.replaceAll("Lorem","<a href='#'>link</a>")
+document.getElementById("demo").innerHTML = newText;
+//---using regex and replace--------------
+let text =Please visit Microsoft! Microsoft
+ document.getElementById("demo").innerHTML =
+  text.replace(/Microsoft/g,"W3Schools");   //(for case insensitive write /microsoft/i)
+output=>  Please visit W3Schools! W3Schools
+//---------------------------------------------------------clouser------------------------------------------------
+make a private variable
+const increment=()=>{
+  let counter=0;
+  const add=(()=>{
+      counter=counter+1;
+      console.log(counter)
+  })
+  return add
+}
+let add=increment()
+add()
+add()
+add()
+output=>
+1
+2
+3
+//------------------------------------------------------call apply and bind------------------------------------------
+borrowing function from another object
+const employee={
+    firstname:"abc",
+    lastname:"xyz",
+    getName(location){
+        console.log(this.firstname+" "+ this.lastname+" "+location);
+    }
+}
+const employee1 = {
+    firstname: "Akash",
+    lastname: "T",
+}
+employee.getName.call(employee1,"pune")
+employee.getName.apply(employee1, ["pune"])
+let fun=employee.getName.bind(employee1, ["pune"])  // return function borrowed from another object
+fun()
+output=>
+Akash T pune
+Akash T pune
+Akash T pune
+//----------------------------------------------------prototype--------------------------------------
+with the help of prototype we can achieve the inheritance in javascript
+let obj1 = {
+    name: "yash",
+    age: "98",
+}
+let obj5 = {
+    __proto__: obj1
+}
+console.log(obj5.name+" "+obj1.age);
+output: yash 98
+--------add properties to constructor funtion (prototype)-----
+function Student() {
+    this.name = 'John';
+    this.gender = 'M';
+}
+Student.prototype.age = 15;
+var studObj1 = new Student();
+document.write('studObj1.age = ' + studObj1.age); // 15
+var studObj2 = new Student();
+document.write('studObj2.age = ' + studObj2.age); // 15
+Student.prototype = { age: 20 };
+var studObj3 = new Student();
+var studObj4 = new Student();
+document.write('studObj3.age = ' + studObj3.age); // 20
+document.write('studObj4.age = ' + studObj4.age); // 20
+document.write('studObj1.age = ' + studObj1.age); // 15
+document.write('studObj2.age = ' + studObj2.age); // 15
+//-----------------------------------------------------duplicates in an array
+let arr=['0','1','1','2','2','3','0']
+let a= arr.reduce((t,ele)=>{
+    t[ele]=t[ele]?t[ele]+1:1;
+    return t
+},{})
+console.log(a)
+o/p=>
+{0: 2, 1: 2, 2: 2, 3: 1}
+//---------------------------------------------------string reverse--------
+let str1="Akash";
+console.log(str1.charAt(0))
+for(let i=str1.length-1;i>=0;i--){
+    str=str+str1.charAt(i)
+}
+console.log(str)

@@ -1,0 +1,84 @@
+body{
+  background-color: chocolate;
+}
+
+
+
+.main{
+  text-align: center;
+  background-color: antiquewhite;
+  height: 100px;
+  color: red; 
+  padding-top: 30px;
+  font-size: 50px;
+}
+
+.subject{
+  text-align: center;
+  font-size: 35px;
+  background-color: burlywood;
+  padding:20px
+}
+.questions{
+  margin-left: 300px;
+  font-size: 25px;
+}
+
+.options{
+  margin-left: 350px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.queAns{
+  background-color:white;
+  margin-left: 10vw;
+  margin-right: 10vw;
+
+}
+.btn{
+  margin-top: 20px;
+}
+.prev{
+  color: white;
+  background-color: black;
+  padding:8px
+}
+.next{
+  color: white;
+  background-color: black;
+  padding:8px;
+
+}
+.finish{
+  text-align: center;
+  background-color: white;
+  padding:20px;
+  margin-left: 40vw;
+  margin-right: 40vw;
+  margin-top: 70px;
+}
+#finish{
+  padding: 5px;
+  margin-left: 3vw;
+}
+
+
+.Home{
+  margin-left: 30vh;
+  margin-right: 30vh;
+  padding-left: 50vh;
+  background-color: yellow;
+  
+}
+.numbers{
+  text-align: center;
+}
+.retHome{
+  padding:7px;
+  margin-left:107vh ;
+  color: green;
+  background-color: black;
+
+}
+

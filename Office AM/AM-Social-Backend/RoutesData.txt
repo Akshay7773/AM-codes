@@ -1,0 +1,140 @@
+USER AUTHENTICATION AND CHANGE PASSWORD ROUTES 
+
+1. Register route:
+Request: POST
+URL: http://localhost:3300/api/user/register
+Schema:{
+firstname: string ,
+lastname: string,
+email: string ,
+password: string
+}
+
+2. Login route:
+Request: POST
+URL: http://localhost:3300/api/user/login
+Schema:{ email: string, password: string}
+Response: token => key: 'authorization'
+Enter this token in headers with the given key for token required routes
+
+3. Google Login
+Request: POST
+URL: http://localhost:3300/api/user/auth/google
+Schema: {
+    idToken:,
+    reCaptchaToken:,
+}
+Implement just like live exam center google login
+In client ID : 90637269027-cqmns9kff5q3usbr7aqr4qmd8ffeqp4g.apps.googleusercontent.com
+If user has signed up with google email then you will get token and other google data in response 
+else you will get error that user not registered
+
+4. Change password route:
+Request: PUT
+URL: http://localhost:3300/api/user/updatePassword
+Schema:{ currentPassword: string, newPassword: string}
+Token : required
+Note: Do not send ID through params
+
+----------------------------------------------------------------
+
+POST ROUTES
+
+1. Create Post route:
+Request: POST
+URL: http://localhost:3300/api/post/addPost
+Schema:{ image: string, caption: string }
+Token : required
+Note: Do not send ID through params
+
+2. Get all posts route:
+Request: GET
+URL: http://localhost:3300/api/post/getPost?page=1&limit=1
+Schema: no schema
+Token: required
+
+3. Likes to post route:
+Request: PUT
+URL: http://localhost:3300/api/post/likeToPost
+Schema:{
+    postId: string
+}
+Token: required
+
+--------------------------------------------------------------------------------
+
+COMMENTS PART
+
+4. Comments to post route:
+Request: POST
+URL: http://localhost:3300/api/post/addComment
+Schema:{
+    postId: string,
+    text: string
+}
+Token: required
+
+5.Getting all comments route
+Request: GET
+URL: http://localhost:3300/api/post/getComments
+Schema: no schema
+Token: required
+
+5. Likes to comments route:
+Request: PUT
+URL:  http://localhost:3300/api/post/likeToComment
+Schema:{
+    commentId
+}
+Token: required
+
+------------------------------------------------------------
+
+PROFILE ROUTES
+
+1. Update profile route:
+Request: PUT
+URL: http://localhost:3300/api/profile/update
+Schema:{ 
+bio: string, 
+gender: string, 
+image: string, 
+userName: string, 
+dob: string, 
+email: string, 
+mobile: number 
+}
+Token: required
+Note: Do not send ID through params
+
+2. Get Profile of user route 
+Request: GET
+URL: http://localhost:3300/api/profile/getProfile
+Schema: no schema
+Token: required
+Note: Do not send ID through params
+
+------------------------------------------------------------
+
+Client ID: 90637269027-cqmns9kff5q3usbr7aqr4qmd8ffeqp4g.apps.googleusercontent.com
+
+Client Secret: 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
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

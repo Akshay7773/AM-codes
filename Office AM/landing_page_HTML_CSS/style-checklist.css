@@ -1,0 +1,143 @@
+.checklist-main-container {
+  background-image: url("./resources/bg-checklist.svg");
+}
+
+.checklist-p {
+  width: 863px;
+  height: 48px;
+  left: 48px;
+  top: 48px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  /* identical to box height, or 48px */
+
+  letter-spacing: -0.02em;
+
+  color: #071d49 !important;
+}
+
+.checklist-div {
+  margin: 60px 0;
+  height: 420px;
+}
+
+.innovation-container {
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  background: rgb(198, 226, 238);
+  margin-top: 20px;
+}
+.access-div {
+  width: 380px;
+}
+.numbers {
+  /* width: 195px;
+  height: 80px;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 100%;
+  text-shadow: -2px 0px 2px #071d49, 2px 2px 2px #071d49, 2px 2px 2px #071d49,
+    2px 2px 2px #071d49; */
+  text-align: center;
+  font-size: 13vh;
+  font-family: sans-serif;
+  font-weight: 1000;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.access-text {
+  width: 84px;
+  height: 29px;
+  left: 230px;
+  top: 25.5px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  /* or 30px */
+
+  letter-spacing: -0.02em;
+
+  /* Primary/Navy */
+
+  color: #071d49;
+}
+
+.container-div1 {
+  margin-left: 98px;
+}
+
+.innovation-p {
+  width: 439px;
+  height: 100px;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  margin-left: 140px;
+  /* or 50px */
+
+  /* Dark Blue */
+
+  color: #071d49 !important;
+}
+
+.horizontal-line {
+  color: rgb(73, 73, 163);
+}
+
+.container {
+  max-width: unset !important;
+}
+
+.therapeutic-div {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  [class*="checklist-p"] {
+    width: 490px !important;
+    height: 76px !important;
+    left: 48px;
+    top: 48px;
+
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 120%;
+
+    letter-spacing: -0.02em;
+
+    color: #071d49;
+  }
+  [class*="innovation-p"] {
+    width: unset !important;
+    margin-left: 50px !important;
+  }
+
+  [class*="checklist-div"] {
+    margin: unset !important;
+  }
+  [class*="container-div"] {
+    margin-left: 30px !important;
+  }
+  [class*="access-div"] {
+    margin-left: 60px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="checklist-p"] {
+    /* width: 288px !important ; */
+    width: unset !important;
+  }
+  [class*="hide-content"] {
+    /* font-size: 40px; */
+    color: transparent;
+    text-shadow: 0 0 4px #000;
+  }
+}

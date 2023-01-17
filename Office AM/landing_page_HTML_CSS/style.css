@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  overflow-x: hidden !important;
+}
+.d-flex .nav-link.navbar-menu-item {
+  height: auto !important;
+  width: auto !important;
+  margin: auto;
+}
+
+.btn-info1 {
+  background: #c5def4 !important;
+  border: unset !important;
+  width: 160px;
+  height: 55px;
+  color: #071d49;
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  /* font-size: 15px !important; */
+  line-height: 16px;
+  letter-spacing: -0.01em;
+}
+
+.nav-link {
+  height: 14px !important;
+  color: #071d49 !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 14px !important;
+}
+.enable-headline {
+  padding-top: 20%;
+
+  width: 430px !important;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 111%;
+
+  color: #071d49;
+}
+.dropdown-toggle::after {
+  color: #3bbfb5;
+}
+.event-p {
+  /* position: absolute; */
+  width: 572px;
+  height: 48px;
+
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 150%;
+
+  letter-spacing: -0.01em;
+}
+.row {
+  --bs-gutter-x: unset !important;
+}
+
+.learn-more-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+
+  width: 123px;
+  height: 40px;
+
+  background: #254aa0;
+  border-radius: 4px;
+}
+
+.enable-div {
+  margin-top: 50px !important;
+}
+
+.enable-header {
+  margin-left: 40px;
+}
+@media only screen and (max-width: 1024px) {
+  [class*="btn-info1"] {
+    background: #254aa0 !important;
+    color: #ffffff !important;
+  }
+  [class*="enable-headline"] {
+    width: 312px !important;
+    left: 36px;
+    top: 104px;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+  }
+  [class*="event-p"] {
+    width: 313px;
+    height: 96px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+  }
+  [class*="enable-div"] {
+    margin-top: unset !important;
+  }
+  [class*="innovation-p"] {
+    width: 245px !important;
+    font-size: 25px !important;
+    margin-left: 100px !important;
+  }
+  .enable-header {
+    margin-left: unset !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="enable-div"] {
+    margin-top: -50px !important;
+  }
+  [class*="enable-headline"] {
+    width: 265px !important;
+  }
+  [class*="event-p"] {
+    width: 260px !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    letter-spacing: -0.01em;
+
+    /* Dark Blue */
+
+    color: #071d49;
+  }
+  .enable-header {
+    margin-left: unset !important;
+  }
+}

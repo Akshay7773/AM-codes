@@ -1,0 +1,116 @@
+.minimise-container {
+  border-bottom-left-radius: 90px;
+  position: relative;
+  margin-top: -200px;
+  background-image: linear-gradient(#3bbfb5, #254aa0);
+  height: 492px;
+  padding: 60px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.minimise-header {
+  /* Heading 2 */
+
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 141.9%;
+  /* or 45px */
+
+  /* White */
+
+  color: #ffffff;
+  display: flex;
+}
+
+.minimize-div {
+  width: 845px;
+}
+.minimise-p {
+  width: 845px;
+  height: 82px;
+
+  /* Body Copy */
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+
+  /* or 150% */
+
+  /* White */
+
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 1024px) {
+  [class*="minimise-container"] {
+    height: 462px !important;
+    background-image: linear-gradient(#3bbfb5, #254aa0);
+    border-top-right-radius: 100px;
+
+    padding: 60px 0px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 0px;
+  }
+  [class*="minimize-div"] {
+    width: 532px !important;
+  }
+  [class*="minimise-header"] {
+    width: 530px !important;
+    height: 102px !important;
+
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 141.9%;
+  }
+  [class*="minimise-p"] {
+    width: 532px !important;
+    height: 82px !important;
+
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 148.9%;
+  }
+}
+
+/* mobile view */
+
+@media only screen and (max-width: 767px) {
+  [class*="minimise-container"] {
+    /* width: 500px !important; */
+
+    width: 100vw !important;
+    height: 767px !important;
+    background-image: linear-gradient(#3bbfb5, #254aa0);
+    border-top-right-radius: 100px;
+
+    /* padding: 60px 0px !important; */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 0px;
+  }
+  [class*="minimize-div"] {
+    width: 245px !important;
+  }
+  [class*="minimise-header"] {
+    width: 253px !important;
+    height: 204px !important;
+
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 141.9%;
+  }
+  [class*="minimise-p"] {
+    width: 253px !important;
+    height: 182px !important;
+
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 148.9%;
+  }
+}

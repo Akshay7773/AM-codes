@@ -1,0 +1,312 @@
+.upholding-container {
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  background: rgb(138, 125, 236);
+  background: linear-gradient(
+    0deg,
+    rgba(138, 125, 236, 1) 0%,
+    rgba(50, 88, 150, 1) 100%
+  );
+
+  margin-top: 15px;
+}
+
+.uploading-div {
+  margin-left: 108px;
+  margin-top: 112px;
+}
+
+.contact-p {
+  text-decoration: underline;
+  margin: 20px;
+  color: white;
+  text-decoration-color: red;
+  font: bold;
+  font-size: 20px;
+}
+
+.upholding-header {
+  height: 40px;
+
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+
+  color: #ffffff;
+}
+
+.upholding-ensure-p {
+  height: 40px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+
+  color: #ffffff;
+}
+
+.upholding-patient-p {
+  padding-left: 18px;
+  height: 20px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150.9%;
+
+  color: #ffffff;
+}
+
+.upholding-patient-btn {
+  padding-left: 24px;
+}
+.upholding-transperfect-p-div {
+  padding-left: 18px;
+  height: 90px;
+}
+.upholding-transperfect-p2-div {
+  width: 574px;
+  padding-left: 30px;
+  height: 99px;
+}
+.upholding-transperfect-p {
+  /* width: 531px; */
+  padding-right: 25px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160.9%;
+
+  color: #ffffff;
+}
+.upholding-transperfect-p-accurate {
+  width: 200px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160.9%;
+
+  color: #ffffff;
+}
+
+.upholding-first-div {
+  padding-left: 80px;
+}
+.meet-global-div2 {
+  padding-top: 25px;
+  padding-left: 28px;
+  margin-top: 20px;
+}
+
+.accurate-p-margin {
+  /* margin-left: 10px; */
+}
+.upholding-patient-p2 {
+  /* width: 428px; */
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160.9%;
+
+  color: #ffffff;
+}
+.upholding-patient-header {
+  width: 224px;
+  height: 22px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150.9%;
+  margin-left: 29px;
+
+  color: #ffffff;
+}
+@media only screen and (max-width: 1023px) {
+  [class*="upholding-transperfect-p"] {
+    width: 550px;
+  }
+  [class*="meet-global-div2"] {
+    margin-left: 35px;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+  [class*="accurate-p-margin"] {
+    margin-left: unset !important;
+  }
+  [class*="uploading-div"] {
+    margin-top: 100px !important;
+    margin-left: 110px !important;
+  }
+  [class*="upholding-header"] {
+    width: 550px !important;
+    height: 34px !important;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 141.9%;
+
+    color: #ffffff;
+  }
+  [class*="upholding-ensure-p"] {
+    width: 457px;
+    height: 40px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+
+    color: #ffffff;
+  }
+  [class*="upholding-patient-header"] {
+    width: 224px;
+    height: 30px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150.9%;
+    margin-left: 29px;
+
+    color: #ffffff;
+  }
+  [class*="upholding-patient-p2"] {
+    width: 550px;
+    margin-left: 26px;
+  }
+  [class*="meet-global-p"] {
+    margin-left: 24px;
+  }
+  [class*="upholding-patient-btn"] {
+    padding-left: 85px;
+  }
+  [class*="upholding-patient-div2"] {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  [class*="upholding-container"] {
+    height: unset !important;
+  }
+  [class*="upholding-patient-div2"] {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 45px !important;
+    padding-left: 8px !important;
+  }
+  [class*="upholding-first-div"] {
+    padding: unset !important;
+  }
+  [class*="uploading-div"] {
+    /* width: 300px !important; */
+    margin-top: 60px !important;
+    margin-left: 60px !important;
+  }
+  [class*="upholding-patient-btn"] {
+    padding: unset !important;
+  }
+  [class*="contact-p"] {
+    margin-left: 55px;
+    margin-top: 50px;
+  }
+  [class*="upholding-header"] {
+    /* width: 294px !important; */
+    margin-bottom: 30px;
+    width: unset !important;
+    height: 68px !important;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 141.9%;
+
+    color: #ffffff;
+  }
+  [class*="upholding-ensure-p"] {
+    /* width: 294px !important; */
+    width: unset !important;
+    height: 60px !important;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  [class*="upholding-patient-div"] {
+    /* width: 300px !important; */
+    margin-top: 25px !important;
+    margin-bottom: 40px;
+    margin-left: 30px !important;
+  }
+  [class*="upholding-patient-header"] {
+    /* width: 224px; */
+    width: unset !important;
+    height: 30px;
+
+    margin-left: 30px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150.9%;
+
+    color: #ffffff;
+  }
+  [class*="upholding-patient-p2"] {
+    margin-left: 70px !important;
+  }
+  [class*="upholding-patient-p"] {
+    margin: unset !important;
+    width: 275px;
+    width: unset !important;
+    height: 53px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160.9%;
+
+    color: #ffffff;
+  }
+  [class*="meet-global-div2"] {
+    margin: unset !important;
+    padding-left: 37px !important;
+  }
+  [class*="upholding-transperfect-p"] {
+    width: unset !important;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160.9%;
+  }
+  [class*="upholding-patient-p-accurate"] {
+    /* width: 275px !important; */
+    width: unset !important;
+    height: 60px !important;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150.9%;
+  }
+  [class*="accurate-p-margin"] {
+    margin: unset !important;
+  }
+  [class*="meet-global-p"] {
+    /* width: 275px !important; */
+    width: unset !important;
+    height: 60px !important;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150.9%;
+  }
+  [class*="contact-p"] {
+    /* width: 110px !important; */
+    width: unset !important ;
+    height: 24px !important;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  [class*="contact-p"] {
+    /* width: 110px !important; */
+
+    height: 24px !important;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

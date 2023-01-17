@@ -1,0 +1,143 @@
+/_USER AUTHENTICATION AND CHANGE PASSWORD ROUTE_/
+
+1. Register user
+   URL: http://localhost:8080/auth/register
+   Req: POST
+   Schema:{ firstname, lastname, email, password }
+   Token is generated
+
+2. Email verification
+   i. Send verification email
+   URL: http://localhost:8080/auth/send-verification-email
+   Req: POST
+   Schema: No schema
+   Authorization token : Required\*
+   You get a link in mail
+
+   ii. Verify email
+   URL: http://localhost:8080/auth/verify-email?token=
+   Req: POST
+   Schema: No schema
+   Authorization token : Not required
+
+3. Login user
+   URL: http://localhost:8080/auth/login
+   Req: POST
+   Schema: { email, password }
+   Also token is generated
+
+4. Google Login
+   URL: http://localhost:8080/auth/google-login
+   Req: POST
+   Schema: { idToken }
+   Token is generated
+
+5. Forgot Password
+   i. Forgot password
+   URL: http://localhost:8080/auth/forgot-password
+   Req: POST
+   Schema: { email }
+   Authorization token: Not required
+   You get a link in mail
+
+   ii. Reset password
+   URL: http://localhost:8080/auth/reset-password?token=
+   Req: POST
+   Schema: { new password }
+
+6. Change Password
+   URL: http://localhost:8080/auth/change-password
+   Req: POST
+   Schema: {currentPass, newPass, confirmPass}
+   Authorization token: Required\*
+
+================================================================================================
+
+/_USER PROFILE ROUTE_/
+
+1. Update profile route
+   URL: http://localhost:8080/users
+   Req: PATCH
+   Schema:{ username*,gender*,image,bio,dob,mobile }
+   Authorization token: Required\*
+
+<!-- 2.Get user profile data
+URL: http://localhost:8080/users
+Req: GET
+Schema: No schema
+Authorization token: Required\* -->
+
+2. Get user data
+   URL:http://localhost:8080/auth/self
+   Req: GET
+   Schema: No schema
+   Authorization token: Required\*
+   NOTE:This api can be used to get user data
+
+================================================================================================
+
+/_POST ROUTES_/
+
+1. Get all posts
+   URL: http://localhost:8080/posts?page=1&limit=10
+   Req: GET
+   Schema: No schema
+   Authorization token: Required\*
+
+2. Add new post
+   URL: http://localhost:8080/posts
+   Req: POST
+   Schema:{ image*,caption* }
+   Authorization token: Required\*
+
+3. Like to post
+   URL: http://localhost:8080/posts
+   Req: PUT
+   Schema:{ postId* }
+   Authorization token: Required*
+
+4. Save post to user
+   URL: http://localhost:8080/users
+   Req: PATCH
+   Schema: {postId}
+   Authorization token: Required*
+
+==============================================================================================
+
+/_COMMENTS ROUTE_/
+
+1. Add comment
+   URL: http://localhost:8080/comments/:postId
+   Req: POST
+   Schema:{ text* }
+   Authorization token: Required*
+
+2. Get comments on a particular post
+   URL: http://localhost:8080/comments/:postId
+   Req: GET
+   Schema: No schema
+   Authorization token: Required\*
+
+3. Like a comment
+   URL: http://localhost:8080/comments/628f4c381ef899d65426cce5
+   Req:PUT
+   Schema: { commentId }
+   Authorization token: Required\*
+
+4.Reply to comment
+   URL: http://localhost:8080/comments/628f4c381ef899d65426cce5
+   Req: PATCH
+   Schema: { commentId, replyText}
+   Authorization token: Required\*
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+BACKEND INFORMATION
+
+1. Register: URL, body, request
+2. Login: URL, body, request
+3. Reset password:
+   i. Forgot pasword: body-> email
+   ii.Reset password: body-> password, params-> token from mail
+4. Get User: authorization header->Bearer token
+5. Email verification:
+   i. send-verification-email: authorization header->Bearer token
+   ii. Verify-email: params-> token from mail 6.

@@ -1,0 +1,24 @@
+{
+  "name": "test-nodejs",
+  "version": "1.0.0",
+  "description": "nodejs test AM Social Feed",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "nirmiti",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
+    "google-auth-library": "^8.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.1",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15"
+  }
+}

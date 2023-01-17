@@ -1,0 +1,122 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.home {
+  background-color: black;
+}
+.hello {
+  background-color: black;
+  color: red;
+  padding: 2vh;
+}
+
+.Questions {
+  text-align: center;
+}
+
+#select {
+  display: grid;
+  grid: 150px / auto auto auto;
+  grid-gap: 10px;
+}
+
+#questionType {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid: 10px  / auto auto auto; */
+  grid-gap: 5px;
+  padding: 10px;
+}
+#queInput {
+  /* padding:60px; */
+  height: 20vh;
+  width: 50vw;
+}
+
+.addque {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  margin: 10px;
+}
+
+.selectSub {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  margin: 10px;
+}
+#midDropDown {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  margin: 10px;
+}
+
+#inputQue {
+  height: 10vh;
+  width: 80vh;
+}
+#subid {
+  margin-right: 20px;
+}

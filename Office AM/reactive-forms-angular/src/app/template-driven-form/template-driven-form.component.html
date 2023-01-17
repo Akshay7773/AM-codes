@@ -1,0 +1,54 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  {{ userdata | json }}
+  <div>
+    <label>Name</label>
+    <input
+      #name="ngModel"
+      type="text"
+      class=""
+      [class.is-invalid]="name.invalid && name.touched"
+      required
+      [(ngModel)]="userdata.name"
+      name="name"
+    />
+  </div>
+  <!-- {{ name.invalid }} {{ name.touched }} -->
+  <small *ngIf="name.invalid && name.touched">Name is required</small>
+  <div>
+    <label>Email</label>
+    <input required type="text" [(ngModel)]="userdata.email" name="email" />
+  </div>
+  <div>
+    <label>Phone</label>
+    <input type="text" [(ngModel)]="userdata.contact" name="contact" />
+  </div>
+  <div>
+    <select #language="ngModel" [(ngModel)]="userdata.language" name="language">
+      <option>React</option>
+      <option>Angular</option>
+      <option>Vue</option>
+      <option>Java</option>
+    </select>
+  </div>
+  {{ language.invalid }}
+  <small *ngIf="language.touched"> Select atleast one language </small>
+  <div>
+    <label>male</label>
+    <input
+      type="radio"
+      value="male"
+      name="gender"
+      [(ngModel)]="userdata.gender"
+      id="1"
+    />
+    <label>female</label>
+    <input
+      type="radio"
+      value="female"
+      [(ngModel)]="userdata.gender"
+      name="gender"
+      id="1"
+    />
+  </div>
+  <button [disabled]="userForm.form.invalid" type="submit">submit</button>
+</form>
